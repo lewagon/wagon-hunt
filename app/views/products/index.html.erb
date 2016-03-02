@@ -1,0 +1,9 @@
+<h1 class="text-center">All products</h1>
+
+<ul>
+  <% @products.each do |product| %>
+    <li>
+      <%= product.name %> (<%= product.url %>)
+    </li>
+  <% end %>
+</ul>
