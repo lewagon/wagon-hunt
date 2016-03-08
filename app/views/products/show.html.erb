@@ -1,15 +1,7 @@
-<h1 class="text-center">Le détail du produit</h1>
-
-<h2 class="text-center">
-  <%= @product.name %>
-</h2>
-
-<h3 class="text-center">
-  Url: <%= @product.url %>
-</h3>
-
-<p class="text-center">
-  <%= link_to "Editer", edit_product_path(@product), class: "btn btn-warning" %>
-  <%= link_to "Supprimer", product_path(@product), method: :delete, class: "btn btn-danger" %>
-  <%= link_to "Revenir à la liste", products_path, class: "btn btn-primary" %>
-</p>
+<div class="banner" style="background: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path "background.jpg" %>');">
+  <div class="banner-content">
+    <h1><%= @product.name %></h1>
+    <p><%= @product.tagline %></p>
+    <%= link_to "GET IT", @product.url, class: "btn btn-primary btn-lg" %>
+  </div>
+</div>

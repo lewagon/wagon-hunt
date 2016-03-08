@@ -1,8 +1,7 @@
-<div class="container text-center">
-  <h1>Wagon Hunt</h1>
-  <p>Find best tech products</p>
-  <p>
-    A lot of new products on <%= @today %>
-  </p>
-  <%= link_to "All products", products_path, class: "btn btn-success" %>
+<div class="banner" style="background: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path "background.jpg" %>');">
+  <div class="banner-content">
+    <h1>Wagon Hunt</h1>
+    <p>Find best tech products</p>
+    <%= link_to "All products", products_path, class: "btn btn-primary btn-lg" %>
+  </div>
 </div>
