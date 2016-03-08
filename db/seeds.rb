@@ -9,6 +9,7 @@
 
 Product.destroy_all
 
-Product.create!(name: "Kudoz", url: "http://getkudoz.com", tagline: "Tinder for job search")
-Product.create!(name: "uSlide", url: "http://uslide.io", tagline: "Youtube sucks for education")
-Product.create!(name: "Medpics", url: "http://medpics.com", tagline: "Share your diagnostics")
+Product.create!(name: "Kudoz", url: "http://getkudoz.com", tagline: "Tinder for job search", category: "tech")
+Product.create!(name: "uSlide", url: "http://uslide.io", tagline: "Youtube sucks for education", category: "education")
+Product.create!(name: "Medpics", url: "http://medpics.com", tagline: "Share your diagnostics", category: "tech")
+Product.create!(name: "Le Wagon", url: "http://lewagon.com", tagline: "We bring tech skills to creative people", category: "education")
