@@ -1,9 +1,15 @@
-<h1 class="text-center">All products</h1>
+<h1>All products</h1>
+
+<p>
+  <%= link_to "Revenir à l'accueil", root_path, class: "btn btn-primary" %>
+  <%= link_to "Ajouter un produit", new_product_path , class: "btn btn-success" %>
+</p>
+
 
 <ul>
   <% @products.each do |product| %>
     <li>
-      <%= product.name %> (<%= product.url %>)
+      <%= link_to product.name, product_path(product) %> (<%= product.url %>)
     </li>
   <% end %>
 </ul>

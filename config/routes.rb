@@ -6,7 +6,6 @@ Rails.application.routes.draw do
 
   resources :products
 
-
   # For details on the D
 
   # Serve websocket cable requests in-process
