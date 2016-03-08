@@ -1,7 +1,14 @@
 <div class="banner" style="background: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path "background.jpg" %>');">
   <div class="banner-content">
-    <h1><%= @product.name %></h1>
-    <p><%= @product.tagline %></p>
+    <h1>
+      <%= @product.name %>
+    </h1>
+    <p>
+      <%= @product.tagline %>
+      <span class="label label-default">
+        <%= @product.category %>
+      </span>
+    </p>
     <%= link_to "GET IT", @product.url, class: "btn btn-primary btn-lg" %>
   </div>
 </div>

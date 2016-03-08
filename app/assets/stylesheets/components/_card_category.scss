@@ -1,0 +1,21 @@
+.card-category {
+  display: block;
+  text-align: center;
+  line-height: 200px;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+.card-category:hover {
+  color: white;
+}
+
+.card-category.design {
+  background: $green;
+}
+.card-category.tech {
+  background: $green;
+}
+.card-category.education {
+  background: $green;
+}
