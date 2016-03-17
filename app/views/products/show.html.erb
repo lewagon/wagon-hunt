@@ -1,4 +1,4 @@
-<div class="banner" style="background: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path "background.jpg" %>');">
+<div class="banner" style="background: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= @product.photo? ? cloudinary_url(@product.photo.path, width: 1280, height: 700, crop: :fill) : image_path("background.jpg") %>');">
   <div class="banner-content">
     <h1>
       <%= @product.name %>
