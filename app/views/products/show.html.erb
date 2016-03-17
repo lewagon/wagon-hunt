@@ -9,6 +9,13 @@
         <%= @product.category %>
       </span>
     </p>
+
+    <% if @product.user %>
+      <p>
+        Posted by <%= @product.user.email %>
+      </p>
+    <% end %>
+
     <%= link_to "GET IT", @product.url, class: "btn btn-primary btn-lg" %>
   </div>
 </div>

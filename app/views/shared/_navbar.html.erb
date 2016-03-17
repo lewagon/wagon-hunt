@@ -8,25 +8,32 @@
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
 
-    <!-- Text link -->
-    <%= link_to "All products", products_path, class: "navbar-wagon-item navbar-wagon-link"%>
+    <% if user_signed_in? %>
 
+      <!-- Text link -->
+      <%= link_to "All products", products_path, class: "navbar-wagon-item navbar-wagon-link"%>
 
-    <!-- Profile picture and dropdown -->
-    <div class="navbar-wagon-item">
-      <div class="dropdown">
-        <img src="http://placehold.it/50x50" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
-        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-          <li><a href="#">Profile</a></li>
-          <li><a href="#">Dashboard</a></li>
-          <li><a href="#">Log Out</a></li>
-        </ul>
+      <!-- Profile picture and dropdown -->
+      <div class="navbar-wagon-item">
+        <div class="dropdown">
+          <img src="http://placehold.it/50x50" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
+          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Dashboard</a></li>
+            <li>
+              <%= link_to "Déconnexion", destroy_user_session_path, method: :delete %>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
 
-    <!-- Button (call-to-action) -->
-    <%= link_to "Add product", new_product_path, class: "navbar-wagon-item navbar-wagon-button btn" %>
+      <!-- Button (call-to-action) -->
+      <%= link_to "Add product", new_product_path, class: "navbar-wagon-item navbar-wagon-button btn" %>
 
+    <% else %>
+      <%= link_to "Connexion", new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Inscription", new_user_registration_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <% end %>
   </div>
 
   <!-- Dropdown appearing on mobile only -->
