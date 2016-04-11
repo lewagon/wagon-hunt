@@ -7,9 +7,5 @@ Rails.application.routes.draw do
 
 
   resources :products
-
-  # For details on the D
-
-  # Serve websocket cable requests in-process
-  # mount ActionCable.server => '/cable'
+  resources :upvotes, only: [ :create, :destroy ]
 end
